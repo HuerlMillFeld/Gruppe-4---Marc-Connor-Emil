@@ -1,0 +1,81 @@
+/* Lokale Schriftartdefinition */
+@font-face {
+    font-family: 'Barlow';
+    src: url('../fonts/Gotham-Bold.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    display: flex;
+    margin: 0;
+    height: 100vh; /* Full height of the viewport */
+    overflow: hidden; /* Prevents scrolling */
+    background-color: black;
+}
+
+.section {
+    width: 33.33%; /* Ensures each section takes up 1/3 of the screen */
+    height: 100vh; /* Full height of the viewport */
+    background-size: cover;
+    background-position: center;
+    position: relative; /* Allows positioning of logo and button */
+    transition: transform 0.5s ease; /* Adds a smooth animation on hover */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.garments {
+    background-image: url('/img/stoffrollen.png');
+}
+
+.events {
+    background-image: url('/img/hintergrund.png');
+}
+
+.archive {
+    background-image: url('/img/insta.png');
+}
+
+.section:hover {
+    transform: scale(1.1); /* Enlarges the section on hover */
+}
+
+.logo {
+    position: absolute;
+    top: 25%; /* Adjusted to move the logo further down */
+    width: 300px; /* Increased size of the logo */
+}
+
+button {
+    position: absolute;
+    bottom: 20%; /* Adjusted to move the button higher */
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none; /* Remove default button border */
+    cursor: pointer; /* Add a pointer cursor on hover */
+}
+
+button a {
+    color: rgb(255, 255, 255); /* Ensure the text color is white */
+    text-decoration: none; /* Remove underline from links */
+}
+
+/* Specific styles for each button */
+.button-garments {
+    background-color: #9D1313; /* Tomato */
+}
+
+.button-events {
+    background-color: #ffed00; /* Steel Blue */
+}
+
+.button-archive {
+    background-color: #000000; /* Lime Green */
+}
+
+button:hover {
+    opacity: 0.8; /* Slightly reduce opacity on hover */
+}
