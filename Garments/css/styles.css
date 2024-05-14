@@ -1,0 +1,199 @@
+/* Lokale Schriftartdefinition */
+@font-face {
+    font-family: 'Barlow';
+    src: url('../fonts/Gotham-Bold.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Barlow', sans-serif; /* Lokale Schriftart verwenden */
+}
+
+header {
+    background-color: #9D1313;
+    display: flex;
+    justify-content: center;
+    height: 100px;
+    align-items: center;
+    color: white;
+}
+
+header img {
+    width: 150px;
+    margin-left: 30px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 160px);
+    background-image: url("../img/Stoffrollen.png"); /* Pfad zu deinem Bild */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+
+/* Produkt-Grid für die Mainseite */
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center; /* Zentriere die Boxen horizontal */
+}
+
+.product-link {
+    display: block;
+    width: 500px; /* Festlegen der Breite der Produktbilder */
+    height: 500px; /* Festlegen der Höhe der Produktbilder */
+    overflow: hidden;
+    border-radius: 10px; /* Abgerundete Ecken */
+    transition: transform 0.3s; /* Animation beim Hovern */
+}
+
+.product-link:hover {
+    transform: scale(1.05); /* Vergrößern der Box beim Hovern */
+}
+
+.product-link img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.product {
+    display: flex;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    padding: 50px;
+}
+
+.product img {
+    width: 300px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.product-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.size-buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.size-buttons button {
+    background-color: #000000;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.add-to-cart {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #9D1313;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+footer {
+    background-color: #9D1313; /* Dunkelroter Hintergrund */
+    color: white; /* Weiße Textfarbe */
+    padding: 20px 50px; /* Abstände innen */
+    display: flex; /* Flexbox für Layout */
+    justify-content: space-between; /* Inhalte links und rechts anordnen */
+}
+
+
+footer a {
+    color: white; /* Weiße Linkfarbe */
+    text-decoration: none; /* Keine Unterstreichung */
+    margin-bottom: 10px; /* Abstand zwischen den Links */
+    font-size: 16px; /* Schriftgröße */
+    display: flex;
+    flex-direction: column;
+}
+
+footer b {
+    color: white; /* Weiße Linkfarbe */
+    text-decoration: none; /* Keine Unterstreichung */
+    margin-bottom: 10px; /* Abstand zwischen den Links */
+    font-size: 16px; /* Schriftgröße */
+    display: flex;
+    flex-direction: column;
+}
+
+footer a:hover {
+    text-decoration: underline; /* Unterstreichung beim Hovern */
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 1024px) {
+    header img {
+        width: 150px;
+        margin-right: 5px;
+    }
+
+    .product-link {
+        width: 250px; /* Anpassung der Breite der Produktbilder */
+        height: 250px; /* Anpassung der Höhe der Produktbilder */
+    }
+}
+
+@media screen and (max-width: 823px) {
+    header {
+        flex-wrap: wrap;
+        justify-content: center;
+        height: 100px;
+    }
+
+    header img {
+        width: 100px;
+        margin-top: 15px;
+    }
+
+    .product-link {
+        width: 300px; /* Anpassung der Breite der Produktbilder */
+        height: 300px; /* Anpassung der Höhe der Produktbilder */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .product-grid {
+        flex-direction: column; /* Ändert die Richtung auf Spalte */
+        align-items: center; /* Zentriert die Elemente horizontal */
+    }
+
+    .product-link {
+        width: 100%; /* Volle Breite des Elterncontainers */
+        max-width: 300px; /* Maximale Breite der Produktbilder */
+        height: auto; /* Automatische Höhe basierend auf dem Inhalt */
+    }
+
+    .product {
+        flex-direction: column; /* Ändert die Richtung auf Spalte */
+        align-items: center; /* Zentriert die Elemente horizontal */
+    }
+
+    .product img {
+        margin-right: 0; /* Entfernt den rechten Rand */
+        margin-bottom: 20px; /* Fügt einen unteren Rand hinzu */
+    }
+
+    .product-details {
+        align-items: center; /* Zentriert die Beschreibung */
+        text-align: center; /* Zentriert den Text */
+    }
+}
