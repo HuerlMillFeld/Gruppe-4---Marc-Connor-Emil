@@ -1,7 +1,7 @@
 /* Lokale Schriftartdefinition */
 @font-face {
   font-family: 'Barlow';
-  src: url('/Fonts/Gotham-Bold.otf') format('opentype');
+  src: url('../Fonts/Gotham-Bold.otf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
