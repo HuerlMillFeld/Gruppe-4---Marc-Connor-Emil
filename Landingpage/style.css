@@ -28,15 +28,15 @@ body {
 }
 
 .garments {
-    background-image: url('/img/Stoffrollen.png');
+    background-image: url('img/Stoffrollen.png');
 }
 
 .events {
-    background-image: url('/img/hintergrund.png');
+    background-image: url('img/hintergrund.png');
 }
 
 .archive {
-    background-image: url('/img/insta.png');
+    background-image: url('img/insta.png');
 }
 
 .section:hover {
