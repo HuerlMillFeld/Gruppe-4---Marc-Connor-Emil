@@ -33,7 +33,7 @@ main {
   justify-content: center;
   align-items: center;
   height: calc(100vh - 160px);
-  background-image: url("/img/hintergrund.png");
+  background-image: url("../img/hintergrund.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center top;

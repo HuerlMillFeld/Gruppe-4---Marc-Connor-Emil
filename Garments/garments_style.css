@@ -32,7 +32,7 @@ main {
     justify-content: center;
     align-items: center;
     height: calc(100vh - 160px);
-    background-image: url("/img/Stoffrollen.png"); /* Pfad zu deinem Bild */
+    background-image: url("../img/Stoffrollen.png"); /* Pfad zu deinem Bild */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center top;
