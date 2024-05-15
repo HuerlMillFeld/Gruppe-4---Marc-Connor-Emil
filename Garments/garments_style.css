@@ -1,7 +1,7 @@
 /* Lokale Schriftartdefinition */
 @font-face {
     font-family: 'Barlow';
-    src: url('../fonts/Gotham-Bold.otf') format('truetype');
+    src: url('../Fonts/Gotham-Bold.otf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -32,7 +32,7 @@ main {
     justify-content: center;
     align-items: center;
     height: calc(100vh - 160px);
-    background-image: url("/Img/Stoffrollen.png"); /* Pfad zu deinem Bild */
+    background-image: url("/img/Stoffrollen.png"); /* Pfad zu deinem Bild */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center top;
