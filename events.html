@@ -13,16 +13,36 @@
     </header>
     <main>
         <section class="recent-event">
-            <h2>RECENT EVENT</h2>
+            <h1>RECENT EVENT</h1>
             <p>??.??.2024</p>
             <p>Exciting news is on the horizon! Follow us on Instagram for the big reveal.</p>
             <p>Stay tuned...</p>
             <button><a href="https://www.instagram.com/wavesystem_events" target="_blank">Follow ></a></button>
         </section>
+        <div class="container">
+            <h1>Rave Anmeldung</h1>
+            <form id="raveForm">
+                <label for="firstName">Vorname:</label>
+                <input type="text" id="firstName" name="firstName" required>
+                
+                <label for="lastName">Nachname:</label>
+                <input type="text" id="lastName" name="lastName" required>
+                
+                <label for="phone">Telefonnummer:</label>
+                <input type="tel" id="phone" name="phone" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890">
+                
+                <label for="email">Email Adresse:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <button class="anmelden-formular" type="submit">Anmelden</button>
+                <div id="spinner" class="hidden">Lädt...</div>
+                <div id="error-message" class="hidden">Diese Email wird schon verwendet</div>
+            </form>
+        </div>
     </main>
     <footer>
         <div>
-            <a href="./index.html">Sartseite</a>
+            <a href="./index.html">Startseite</a>
             <a href="./garments.html">Garments</a>
             <a href="https://www.instagram.com/wavesystem_archive" target="_blank">Archive</a>
         </div>
@@ -30,6 +50,8 @@
             <a href="/impressum">Impressum</a>
             <a href="/datenschutz">Datenschutz</a>
         </div>
-    </footer>     
+    </footer>
+    <script src="./js/databaseClient.js"></script>
+    <script src="./js/formHandler.js"></script>
 </body>
 </html>

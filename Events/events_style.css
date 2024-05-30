@@ -27,6 +27,10 @@ header img {
   margin-left: 30px;
 }
 
+h1 {
+  color: white;
+}
+
 main {
   display: flex;
   flex-direction: column;
@@ -59,7 +63,7 @@ main {
 }
 
 .recent-event button {
-  color: #ffffff; 
+  color: white; 
   padding: 10px 20px;
   font-size: 16px;
   background-color: #000;
@@ -82,7 +86,7 @@ footer a {
   font-size: 16px; /* Schriftgröße */
   display: flex;
   flex-direction: column;
-} /* Hinzugefügte schließende Klammer */
+}
 
 footer a:hover {
   text-decoration: underline; /* Unterstreichung beim Hovern */
@@ -107,4 +111,59 @@ footer a:hover {
       width: 100px;
       margin-top: 15px;
   }
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+    color: white;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"] {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="email"]:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+.anmelden-formular {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f05a24;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #d04a1e;
+}
+
+.hidden {
+    display: none;
+}
+
+#spinner {
+    color: white;
+    margin-top: 10px;
+}
+
+#error-message {
+    color: red;
+    margin-top: 10px;
 }
