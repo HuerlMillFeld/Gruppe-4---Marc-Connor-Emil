@@ -1,26 +1,40 @@
 /* Lokale Schriftartdefinition */
 @font-face {
-    font-family: 'Barlow';
-    src: url('../fonts/Gotham-Bold.otf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+        font-family: 'Gotham-Bold';
+        src: url('../Fonts/Gotham-Bold.otf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
 }
 
 body {
     display: flex;
     margin: 0;
-    height: 100vh; /* Full height of the viewport */
-    overflow: hidden; /* Prevents scrolling */
+    height: 100vh; /* Volle Höhe des Viewports */
+    overflow: hidden; /* Verhindert Scrollen */
     background-color: black;
 }
 
+.impressum {
+    position: absolute;  /* Setzt den Impressum-Link relativ zum nächstgelegenen positionierten Vorfahren (hier: body) */
+    z-index: 1000;       /* Stellt sicher, dass der Link über anderen Inhalten angezeigt wird */
+    bottom: 15px;           /* Abstand vom oberen Rand des Viewports */
+    left: 15px;         /* Abstand vom rechten Rand des Viewports */
+    font-size: 16px;     /* Legt die Schriftgröße fest */
+    color: white;        /* Weißer Text, der auf dem schwarzen Hintergrund hervorsticht */
+    padding: 8px 12px;   /* Innerer Abstand um den Text */
+    border-radius: 4px;  /* Abgerundete Ecken für den Hintergrund */
+    text-decoration: none; /* Entfernt die Unterstreichung des Links */
+    cursor: pointer;    /* Zeiger-Cursor beim Überfahren mit der Maus */
+}
+
+
 .section {
-    width: 33.33%; /* Ensures each section takes up 1/3 of the screen */
-    height: 100vh; /* Full height of the viewport */
+    width: 33.33%; /* Jede Sektion nimmt ein Drittel des Bildschirms ein */
+    height: 100vh; /* Volle Höhe des Viewports */
     background-size: cover;
     background-position: center;
-    position: relative; /* Allows positioning of logo and button */
-    transition: transform 0.5s ease; /* Adds a smooth animation on hover */
+    position: relative; /* Ermöglicht das Positionieren von Logo und Button */
+    transition: transform 0.5s ease; /* Fügt eine sanfte Animation beim Hover hinzu */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -40,42 +54,54 @@ body {
 }
 
 .section:hover {
-    transform: scale(1.1); /* Enlarges the section on hover */
+    transform: scale(1.1); /* Vergrößert die Sektion beim Hover */
 }
 
 .logo {
     position: absolute;
-    top: 25%; /* Adjusted to move the logo further down */
-    width: 300px; /* Increased size of the logo */
+    top: 25%; /* Positioniert das Logo weiter unten */
+    width: 70%; /* Erhöht die Größe des Logos */
 }
 
 button {
     position: absolute;
-    bottom: 20%; /* Adjusted to move the button higher */
-    padding: 10px 20px;
-    font-size: 16px;
-    border: none; /* Remove default button border */
-    cursor: pointer; /* Add a pointer cursor on hover */
+    bottom: 20%; /* Positioniert den Button weiter oben */
+    padding: 12px 55px;
+    font-family: Gotham-Bold;
+    font-size: 20px;
+    border-style: none;
+
+    cursor: pointer; /* Zeigt einen Zeiger-Cursor beim Hover */
+}
+a {
+    text-decoration: none; /* Entfernt die Unterstreichung von Links */
 }
 
-button a {
-    color: rgb(255, 255, 255); /* Ensure the text color is white */
-    text-decoration: none; /* Remove underline from links */
-}
-
-/* Specific styles for each button */
+/* Spezifische Stile für jeden Button */
 .button-garments {
-    background-color: #58696d; /* Tomato */
+    background-color: #ffffff;
+    border-radius: 2px;
+}
+.button-text-garments {
+    color: #000000;
 }
 
 .button-events {
-    background-color: #ffed00; /* Steel Blue */
+    background-color: #ffed00;
+    border-radius: 2px;
+}
+.button-text-events {
+    color: #000000;
 }
 
 .button-archive {
-    background-color: #000000; /* Lime Green */
+    background-color: #000000;
+    border-radius: 2px;
+}
+.button-text-archive {
+    color: #ffffff;
 }
 
 button:hover {
-    opacity: 0.8; /* Slightly reduce opacity on hover */
+    opacity: 0.8; /* Verringert die Opazität beim Hover leicht */
 }
