@@ -7,8 +7,10 @@
     height: 300px;
     border: 1px solid black;
     margin: auto;
-    background-image: url("../img/game-hintergrund.jpg");
+    background-image: url("../img/game-hintergrundv2.jpg");
     background-size: cover;
+  }
+  .background-animation {
     animation: background-animation 10s infinite linear;
   }
   
@@ -23,25 +25,27 @@
   }
   
   #dino {
-    height: 75px;
+    height: 113px;
     width: 75px;
-    top: 225px;
+    top: 189px;
     position: relative;
     background-image: url("../img/dancing\ skeleton.gif");
     background-size: cover;
   }
   
   #rock {
-    width: 50px;
-    height: 50px;
+    width: 100px;
+    height: 100px;
     position: relative;
-    top: 175px;
+    top: 88px;
     left: 550px;
     background-image: url("../img/jump-objekt.png");
     background-size: cover;
+  }
+  .rock-animation {
     animation: rock 1.33s infinite;
   }
-  
+
   @keyframes rock {
     0% {
       left: 550px;
