@@ -16,16 +16,30 @@ body, html {
 header {
     background-color: #58696d;
     display: flex;
-    justify-content: center;
+    justify-content: start;
     height: 100px;
     align-items: center;
     color: white;
+    width: 100% ;
 }
 
-header img {
+.nav a {
+    color: #ffffff;
+    text-decoration: none; /* Lässt die Links als normalen Text anzeigen */
+    margin: 20px;
+}
+
+header a:hover {
+    text-decoration: underline; /* Unterstreichung beim Hovern */
+}
+
+.logo {
     width: 150px;
     margin-left: 30px;
+    margin-right: 90vh;
 }
+
+
 
 main {
     display: flex;
@@ -108,10 +122,12 @@ main {
     cursor: pointer;
 }
 
+
+
 footer {
     background-color: #58696d; /* Dunkelroter Hintergrund */
     color: white; /* Weiße Textfarbe */
-    padding: 20px 50px; /* Abstände innen */
+    padding: 25px 75px; /* Abstände innen */
     display: flex; /* Flexbox für Layout */
     justify-content: space-between; /* Inhalte links und rechts anordnen */
 }
@@ -122,17 +138,20 @@ footer a {
     text-decoration: none; /* Keine Unterstreichung */
     margin-bottom: 10px; /* Abstand zwischen den Links */
     font-size: 16px; /* Schriftgröße */
+}
+
+.footer-links, .footer-legal {
     display: flex;
     flex-direction: column;
 }
 
-footer b {
-    color: white; /* Weiße Linkfarbe */
-    text-decoration: none; /* Keine Unterstreichung */
-    margin-bottom: 10px; /* Abstand zwischen den Links */
-    font-size: 16px; /* Schriftgröße */
-    display: flex;
-    flex-direction: column;
+.footer-links {
+    align-items: start; /* Links ausgerichtet */
+}
+
+.footer-legal {
+    align-items: end; /* Rechts ausgerichtet */
+    justify-content: end; /* Am unteren Ende des Footers ausrichten*/
 }
 
 footer a:hover {

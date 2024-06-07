@@ -1,80 +1,117 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #000000;
+  font-family: Arial, sans-serif;
+}
+
+#container {
+  background-color: yellow;
+  padding: 20px;
+  border: 2px solid black;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
 #score {
-    text-align: center;
-  }
-  
-  #game {
-    width: 600px;
-    height: 300px;
-    border: 1px solid black;
-    margin: auto;
-    background-image: url("../img/game-hintergrundv2.jpg");
-    background-size: cover;
-  }
-  .background-animation {
-    animation: background-animation 10s infinite linear;
-  }
-  
-  @keyframes background-animation {
-    0% {
-      background-position: 0px 0px;
-    }
-  
-    100% {
-      background-position: -600px 0px;
-    }
-  }
-  
-  #dino {
-    height: 113px;
-    width: 75px;
-    top: 189px;
-    position: relative;
-    background-image: url("../img/dancing\ skeleton.gif");
-    background-size: cover;
-  }
-  
-  #rock {
-    width: 100px;
-    height: 100px;
-    position: relative;
-    top: 88px;
-    left: 550px;
-    background-image: url("../img/jump-objekt.png");
-    background-size: cover;
-  }
-  .rock-animation {
-    animation: rock 1.33s infinite;
+  margin: 20px 0;
+  font-size: 24px;
+}
+
+#game {
+  width: 600px;
+  height: 300px;
+  border: 1px solid black;
+  margin: 0 auto;
+  background-image: url("../img/game-hintergrundv2.jpg");
+  background-size: cover;
+  position: relative;
+}
+
+.background-animation {
+  animation: background-animation 10s infinite linear;
+}
+
+@keyframes background-animation {
+  0% {
+    background-position: 0px 0px;
   }
 
-  @keyframes rock {
-    0% {
-      left: 550px;
-    }
-  
-    100% {
-      left: -50px;
-    }
+  100% {
+    background-position: -600px 0px;
   }
-  
-  .jump-animation {
-    animation: jump 0.5s;
+}
+
+#dino {
+  height: 113px;
+  width: 75px;
+  top: 189px;
+  position: relative;
+  background-image: url("../img/dancing\ skeleton.gif");
+  background-size: cover;
+}
+
+#rock {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  top: 88px;
+  left: 550px;
+  background-image: url("../img/jump-objekt.png");
+  background-size: cover;
+}
+
+.rock-animation {
+  animation: rock 1.33s infinite;
+}
+
+@keyframes rock {
+  0% {
+    left: 550px;
   }
-  
-  @keyframes jump {
-    0% {
-      top: 225px;
-    }
-  
-    50% {
-      top: 75px;
-    }
-  
-    75% {
-      top: 75px;
-    }
-  
-    100% {
-      top: 225px;
-    }
+
+  100% {
+    left: -50px;
   }
-  
+}
+
+.jump-animation {
+  animation: jump 0.5s;
+}
+
+@keyframes jump {
+  0% {
+    top: 225px;
+  }
+
+  50% {
+    top: 75px;
+  }
+
+  75% {
+    top: 75px;
+  }
+
+  100% {
+    top: 225px;
+  }
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #000000;
+  color: white;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #000000;
+}

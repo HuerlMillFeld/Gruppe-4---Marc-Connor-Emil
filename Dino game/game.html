@@ -1,23 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dino Game</title>
-    <link rel="stylesheet" href="game_style.css">
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dino Game</title>
+  <link rel="stylesheet" href="game_style.css">
+</head>
 
-  <body>
+<body>
+  <div id="container">
     <div id="game">
       <div id="dino"></div>
       <div id="rock"></div>
     </div>
     <h1 id="score">0</h1>
-    <button id="startButton">
-      Start
-    </button>
-    <script src="game.js"></script>
-  </body>
+    <button id="startButton">Start</button>
+    <audio id="gameSound" src="/img/[INNERGATE RECORDS] KUKO - VOICEMAIL.wav" type="audio/wav"></audio>
+  </div>
+  <script src="game.js"></script>
+</body>
 
 </html>
