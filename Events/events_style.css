@@ -63,10 +63,10 @@ main {
 }
 
 .recent-event button {
-  color: white; 
   padding: 10px 20px;
   font-size: 16px;
   background-color: #000;
+  color: white; 
   border: none;
   cursor: pointer;
 }
@@ -143,15 +143,15 @@ input[type="email"]:focus {
     padding: 10px;
     border: none;
     border-radius: 5px;
-    background-color: #f05a24;
-    color: #fff;
+    background-color: #ffed00;
+    color: #000000;
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #d04a1e;
+    background-color: #ffee00e0;
 }
 
 .hidden {
