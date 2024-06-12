@@ -1,26 +1,36 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Wavesystem Garments - Startseite</title>
+    <title>Wavesystem Events</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="Events/events_style.css">
 </head>
+
+
 <body>
     <header>
-        <a href="./Dino game/game.html"><img src="./img/ws-envents-white.png" alt="Logo"></a>
+        <a href="./index.html" class="logolink"><img src="./img/ws-envents-white.png" alt="Logo" class="logo"></a>
+        <div class="links">
+            <a href="./garments.html" class="link">WS Garments</a>
+            <a href="./events.html" class="link">WS Events</a>
+            <a href="https://www.instagram.com/wavesystem_archive" target="_blank" class="link">WS Archive</a>
+        </div>
     </header>
+
+
     <main>
         <section class="recent-event">
-            <h1>RECENT EVENT</h1>
+            <h1 class="title">RECENT EVENT</h1>
             <p>??.??.2024</p>
             <p>Exciting news is on the horizon! Follow us on Instagram for the big reveal.</p>
             <p>Stay tuned...</p>
             <button><a href="https://www.instagram.com/wavesystem_events" target="_blank">Follow ></a></button>
         </section>
         <div class="container">
-            <h1>Rave Anmeldung</h1>
+            <h1 class="title">Rave Anmeldung</h1>
             <form id="raveForm">
                 <label for="firstName">Vorname:</label>
                 <input type="text" id="firstName" name="firstName" required>
@@ -40,18 +50,17 @@
             </form>
         </div>
     </main>
+
+
     <footer>
-        <div>
-            <a href="./index.html">Startseite</a>
-            <a href="./garments.html">Garments</a>
-            <a href="https://www.instagram.com/wavesystem_archive" target="_blank">Archive</a>
+        <div class="footer-links">
+            <a href="./garments.html">WS Garments</a>
+            <a href="./events.html">WS Events</a>
+            <a href="https://www.instagram.com/wavesystem_archive" target="_blank">WS Archive</a>
         </div>
-        <div>
-            <a href="/impressum">Impressum</a>
-            <a href="/datenschutz">Datenschutz</a>
+        <div class="footer-legal">
+            <a href="./impressum.html">Impressum</a>
+            <a href="./impressum.html">Datenschutz</a>
         </div>
     </footer>
-    <script src="./js/databaseClient.js"></script>
-    <script src="./js/formHandler.js"></script>
-</body>
 </html>

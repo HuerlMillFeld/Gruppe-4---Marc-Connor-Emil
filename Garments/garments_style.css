@@ -15,17 +15,37 @@ body, html {
 
 header {
     background-color: #58696d;
-    display: flex;
-    justify-content: center;
     height: 100px;
-    align-items: center;
     color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-header img {
+.logolink {
+    margin: 50px;
+}
+
+.logo {
     width: 150px;
     margin-left: 30px;
 }
+
+.links {
+    margin: 50px;
+}
+
+.link {
+    margin: 10px;
+    text-decoration: none;
+    color: white;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+
 
 main {
     display: flex;
@@ -39,6 +59,7 @@ main {
 }
 
 /* Produkt-Grid für die Mainseite */
+
 .product-grid {
     display: flex;
     flex-wrap: wrap;
