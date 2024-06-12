@@ -6,7 +6,7 @@
         font-style: normal;
 }
 
-body {
+.index {
     display: flex;
     margin: 0;
     height: 100vh; /* Volle Höhe des Viewports */
@@ -19,7 +19,7 @@ a {
     text-decoration: none; /* Entfernt die Unterstreichung von Links */
 }
 
-.impressum {
+.impressum-link {
     position: absolute;  /* Setzt den Impressum-Link relativ zum nächstgelegenen positionierten Vorfahren (hier: body) */
     z-index: 1000;       /* Stellt sicher, dass der Link über anderen Inhalten angezeigt wird */
     bottom: 2vh;           /* Abstand vom oberen Rand des Bildschirmes */
@@ -100,10 +100,7 @@ a {
     opacity: 0.8; /* Verringert die Transparenz beim Hover leicht */
 }
 
-
-
-
-/* Ab hier beginnt das Responive Desinge */
+/* Ab hier beginnt das Responive Desing */
 
 @media screen and (max-width: 1000px) {
     .logo {
@@ -160,4 +157,38 @@ a {
         padding: 7px 15px; /*Lässt den Rand Oben und Unten 12px sein und an den Seiten 55px*/
         font-size: 10px;
     }
+    }
+
+
+
+
+
+
+
+
+    /* Ab hier beginnt das Design der Impressum Unterseite */
+
+    .impressum-site {
+        color: #ffffff;
+        background-color: #000000;
+        font-family: Gotham;
+    }
+
+    .logolink {
+        margin: 50px;
+    }
+    
+    .logo-impressum {
+        width: 150px;
+        margin-top: 30px;
+        margin-left: -5px;
+    }
+
+    .impressum-section {
+        padding-left: 50px;
+        padding-top: 35px;
+    }
+
+    .titel {
+        font-size: 25px;
     }
