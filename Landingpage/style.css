@@ -22,9 +22,9 @@ a {
 .impressum {
     position: absolute;  /* Setzt den Impressum-Link relativ zum nächstgelegenen positionierten Vorfahren (hier: body) */
     z-index: 1000;       /* Stellt sicher, dass der Link über anderen Inhalten angezeigt wird */
-    bottom: 15px;           /* Abstand vom oberen Rand des Bildschirmes */
-    left: 15px;         /* Abstand vom rechten Rand des Bildschirmes */
-    font-family: Gotham-Book;
+    bottom: 2vh;           /* Abstand vom oberen Rand des Bildschirmes */
+    left: 2vh;         /* Abstand vom rechten Rand des Bildschirmes */
+    font-family: Gotham-Book;   /* Legt die Schriftart fest */
     font-size: 15px;     /* Legt die Schriftgröße fest */
     color: white;        /* Weißer Text, der auf dem schwarzen Hintergrund hervorsticht */
     padding: 8px 12px;   /* Abstand um den Text */
@@ -99,3 +99,65 @@ a {
 .button:hover {
     opacity: 0.8; /* Verringert die Transparenz beim Hover leicht */
 }
+
+
+
+
+/* Ab hier beginnt das Responive Desinge */
+
+@media screen and (max-width: 1000px) {
+    .logo {
+        width: 80%; /* Erhöht die Größe des Logos */
+    }
+    }
+
+@media screen and (max-width: 750px) {
+    .button {
+        padding: 9px 45px; /*Lässt den Rand Oben und Unten 12px sein und an den Seiten 55px*/
+        font-size: 15px;
+    }
+
+    .logo {
+        width: 90%; /* Erhöht die Größe des Logos */
+    }
+
+    .impressum {
+        font-size: 12px;
+    }
+    }
+
+@media screen and (max-width: 550px) {
+    .button {
+        padding: 8px 35px; /*Lässt den Rand Oben und Unten 12px sein und an den Seiten 55px*/
+        font-family: Gotham-Bold;
+        font-size: 12px;
+    }
+
+    .impressum {
+        font-size: 10px;
+        left: 1.5vh;
+        bottom: 1.5vh;
+    }
+    }
+
+@media screen and (max-width: 420px) {
+    .button {
+        padding: 7px 25px; /*Lässt den Rand Oben und Unten 12px sein und an den Seiten 55px*/
+        font-size: 10px;
+    }
+    }
+
+
+@media screen and (max-width: 420px) {
+    .button {
+        padding: 7px 20px; /*Lässt den Rand Oben und Unten 12px sein und an den Seiten 55px*/
+        font-size: 10px;
+    }
+    }
+
+@media screen and (max-width: 330px) {
+    .button {
+        padding: 7px 15px; /*Lässt den Rand Oben und Unten 12px sein und an den Seiten 55px*/
+        font-size: 10px;
+    }
+    }
