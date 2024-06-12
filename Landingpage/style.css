@@ -12,25 +12,28 @@ body {
     height: 100vh; /* Volle Höhe des Viewports */
     overflow: hidden; /* Verhindert Scrollen */
     background-color: black;
+    font-family: Gotham;
+}
+
+a {
+    text-decoration: none; /* Entfernt die Unterstreichung von Links */
 }
 
 .impressum {
     position: absolute;  /* Setzt den Impressum-Link relativ zum nächstgelegenen positionierten Vorfahren (hier: body) */
     z-index: 1000;       /* Stellt sicher, dass der Link über anderen Inhalten angezeigt wird */
-    bottom: 15px;           /* Abstand vom oberen Rand des Viewports */
-    left: 15px;         /* Abstand vom rechten Rand des Viewports */
-    font-size: 16px;     /* Legt die Schriftgröße fest */
+    bottom: 15px;           /* Abstand vom oberen Rand des Bildschirmes */
+    left: 15px;         /* Abstand vom rechten Rand des Bildschirmes */
+    font-family: Gotham-Book;
+    font-size: 15px;     /* Legt die Schriftgröße fest */
     color: white;        /* Weißer Text, der auf dem schwarzen Hintergrund hervorsticht */
-    padding: 8px 12px;   /* Innerer Abstand um den Text */
-    border-radius: 4px;  /* Abgerundete Ecken für den Hintergrund */
-    text-decoration: none; /* Entfernt die Unterstreichung des Links */
-    cursor: pointer;    /* Zeiger-Cursor beim Überfahren mit der Maus */
+    padding: 8px 12px;   /* Abstand um den Text */
 }
 
 
 .section {
     width: 33.33%; /* Jede Sektion nimmt ein Drittel des Bildschirms ein */
-    height: 100vh; /* Volle Höhe des Viewports */
+    height: 100vh; /* Volle Höhe des Bildschirmes */
     background-size: cover;
     background-position: center;
     position: relative; /* Ermöglicht das Positionieren von Logo und Button */
@@ -63,45 +66,36 @@ body {
     width: 70%; /* Erhöht die Größe des Logos */
 }
 
-button {
+
+
+
+/* Spezifische Stile für jeden Button */
+.button {
     position: absolute;
     bottom: 20%; /* Positioniert den Button weiter oben */
-    padding: 12px 55px;
+    padding: 12px 55px; /*Lässt den Rand Oben und Unten 12px sein und an den Seiten 55px*/
     font-family: Gotham-Bold;
     font-size: 20px;
     border-style: none;
-
-    cursor: pointer; /* Zeigt einen Zeiger-Cursor beim Hover */
-}
-a {
-    text-decoration: none; /* Entfernt die Unterstreichung von Links */
-}
-
-/* Spezifische Stile für jeden Button */
-.button-garments {
-    background-color: #ffffff;
     border-radius: 2px;
 }
-.button-text-garments {
+
+.button-garments {
+    background-color: #ffffff;
     color: #000000;
 }
 
 .button-events {
     background-color: #ffed00;
-    border-radius: 2px;
-}
-.button-text-events {
     color: #000000;
 }
 
 .button-archive {
     background-color: #000000;
-    border-radius: 2px;
-}
-.button-text-archive {
     color: #ffffff;
 }
 
-button:hover {
-    opacity: 0.8; /* Verringert die Opazität beim Hover leicht */
+
+.button:hover {
+    opacity: 0.8; /* Verringert die Transparenz beim Hover leicht */
 }
