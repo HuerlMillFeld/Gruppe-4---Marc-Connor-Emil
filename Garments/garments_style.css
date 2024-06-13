@@ -1,16 +1,26 @@
 /* Lokale Schriftartdefinition */
 @font-face {
-    font-family: 'Barlow';
     src: url('../Fonts/Gotham-Bold.otf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
-body, html {
+body {
     margin: 0;
     padding: 0;
     height: 100%;
-    font-family: 'Barlow', sans-serif; /* Lokale Schriftart verwenden */
+    font-family: Gotham;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+    margin: 10px;
+    font-family: Gotham;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 header {
@@ -22,7 +32,7 @@ header {
     align-items: center;
 }
 
-.logolink {
+.logo-link {
     margin: 50px;
 }
 
@@ -31,19 +41,11 @@ header {
     margin-left: 30px;
 }
 
-.links {
+.nav {
     margin: 50px;
 }
 
-.link {
-    margin: 10px;
-    text-decoration: none;
-    color: white;
-}
 
-.link:hover {
-    text-decoration: underline;
-}
 
 
 
@@ -51,6 +53,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 100px;
     height: calc(100vh - 160px);
     background-image: url("../img/Stoffrollen.png"); /* Pfad zu deinem Bild */
     background-size: cover;
@@ -86,55 +89,7 @@ main {
     object-fit: cover;
 }
 
-.product {
-    display: flex;
-    align-items: center;
-    background-color: rgb(255, 255, 255);
-    padding: 50px;
-}
 
-.Produktbild {
-    width: 800px;
-    height: auto;
-    margin-right: 20px;
-}
-
-.product-details {
-    display: flex;
-    flex-direction: column;
-}
-
-.size-buttons {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 10px;
-}
-
-.size-buttons button {
-    background-color: #000000;
-    color: white;
-    border: none;
-    cursor: pointer;
-    padding: 10px;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-a {
-    text-decoration: none;
-    color: #ffffff;
-    
-
-}
-
-.purchase {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #58696d;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
 
 footer {
     background-color: #58696d; /* Dunkelroter Hintergrund */
@@ -145,22 +100,11 @@ footer {
 }
 
 
-footer a {
-    color: white; /* Weiße Linkfarbe */
-    text-decoration: none; /* Keine Unterstreichung */
+footer-links {
     margin-bottom: 10px; /* Abstand zwischen den Links */
     font-size: 16px; /* Schriftgröße */
     display: flex;
-    flex-direction: column;
-}
-
-footer b {
-    color: white; /* Weiße Linkfarbe */
-    text-decoration: none; /* Keine Unterstreichung */
-    margin-bottom: 10px; /* Abstand zwischen den Links */
-    font-size: 16px; /* Schriftgröße */
-    display: flex;
-    flex-direction: column;
+    flex-direction: row;
 }
 
 footer a:hover {

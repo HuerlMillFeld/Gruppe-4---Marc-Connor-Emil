@@ -1,0 +1,120 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Gotham;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+    margin: 10px;
+    font-family: Gotham;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+
+header {
+    background-color: #58696d;
+    height: 100px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-link {
+    margin: 50px;
+}
+
+.logo {
+    width: 150px;
+    margin-left: 30px;
+}
+
+.nav {
+    margin: 50px;
+}
+
+
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+    height: calc(100vh - 160px);
+    background-image: url("../img/Stoffrollen.png"); /* Pfad zu deinem Bild */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+
+
+.product {
+    display: flex;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    padding: 50px;
+}
+
+.produktbild {
+    height: 200px;
+    margin-right: 20px;
+}
+
+.product-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.size-buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.size-buttons button {
+    background-color: #000000;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.purchase {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #58696d;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+
+
+footer {
+    background-color: #58696d; /* Dunkelroter Hintergrund */
+    color: white; /* Weiße Textfarbe */
+    padding: 20px 50px; /* Abstände innen */
+    display: flex; /* Flexbox für Layout */
+    justify-content: space-between; /* Inhalte links und rechts anordnen */
+    margin-top: 0;
+}
+
+
+footer-links {
+    margin-bottom: 10px; /* Abstand zwischen den Links */
+    font-size: 16px; /* Schriftgröße */
+    display: flex;
+    flex-direction: row;
+}
+
+footer a:hover {
+    text-decoration: underline; /* Unterstreichung beim Hovern */
+}
