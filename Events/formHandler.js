@@ -30,10 +30,10 @@ document.getElementById("raveForm").addEventListener("submit", async (event) => 
     }
 
     await databaseClient.insertInto("wavesystem_anmelden", {
-        firstName: firstName,
-        lastName: lastName,
-        phone: phone,
-        email: email,
+        firstName: firstName.value,
+        lastName: lastName.value,
+        phone: phone.value,
+        email: email.value,
     });
 
     spinner.classList.add("hidden");
