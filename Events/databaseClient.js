@@ -60,14 +60,3 @@ const databaseClient = {
     return result;
   },
 };
-
-/*
-Den folgenden Code müssen Sie nicht in Ihr Projekt übernehmen. 
-Dient als Vorlage für die Verwendung von executeSqlQuery und insertInto.
-*/
-const run = async () => {
-  const users = await databaseClient.executeSqlQuery(
-    "SELECT * user LIMIT 2 ORDER BY ID DESC"
-  );
-  // Das erste Element result[0] enthält Meta Informationen der Datenbank, das lassen wir weg. Die eigentlichen Daten sind in result[1]
-  console.log(users[1]);
