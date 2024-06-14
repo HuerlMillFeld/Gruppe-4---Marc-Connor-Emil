@@ -45,12 +45,10 @@ header {
   color: white;
 }
 
-.nav:hover {
+.link:hover {
   text-decoration: underline;
   color: #ffed00;
 }
-
-
 
 
 
@@ -78,14 +76,18 @@ main {
 }
 
 .titel {
-  color: white;
+  color: #000000;
 }
  
 .recent-event p {
   font-size: 16px;
 }
 
-.button {
+.container {
+  padding 20px 50px;
+}
+
+.follow-button {
   margin-top: 30px;
   padding: 12px 55px; /*Lässt den Rand Oben und Unten 12px sein und an den Seiten 55px*/
   font-family: Gotham-Bold;
@@ -96,7 +98,7 @@ main {
   color: #ffffff;
 }
 
-.button:hover {
+.follow-button:hover {
   text-decoration: none;
   background-color: #000000e0;
   color: #ffffff;
@@ -106,7 +108,6 @@ main {
   color: #ffffff;
   font-family: Gotham-Bold;
   font-weight: normal;
-
 }
 
 
