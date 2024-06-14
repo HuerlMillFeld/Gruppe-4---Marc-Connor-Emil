@@ -1,4 +1,4 @@
-/* Lokale Schriftartdefinition */
+der/* Lokale Schriftartdefinition */
 @font-face {
   src: url('../Fonts/Gotham-Bold.otf') format('truetype');
   font-weight: normal;
@@ -192,14 +192,14 @@ button:hover {
 /* Responsive Design */
 
 @media (max-width: 675px) {
-  .nav a {
+  header {
       font-size: 12px;
       margin: 2px;
       display: flex;
       columns: row;
   }
 
-  .recent-event {
+  main {
     margin-top: 50px;
   }
 
