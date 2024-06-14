@@ -28,13 +28,21 @@ document.getElementById("raveForm").addEventListener("submit", async (event) => 
         spinner.classList.add("hidden");
         return;
     }
-
-    await databaseClient.insertInto("wavesystem_anmelden", {
+document.addEventListener('DOMContentLoaded', () => {
+    const form = document.querySelector('form');
+    form.addEventListener('submit', async (event) => {
+        event.preventDefault(); // Prevent the form from submitting immediately
+        const isValid = await validateForm(); // Validate the form asynchronously
+        if (isValid) {
+                // Speichert die Daten in der Datenbank
+                 await databaseClient.insertInto("wavesystem_anmelden", {
         firstName: firstName.value,
         lastName: lastName.value,
         phone: phone.value,
         email: email.value,
-    });
+    }
+})});
+   
 
     spinner.classList.add("hidden");
     alert("Anmeldung erfolgreich!");
