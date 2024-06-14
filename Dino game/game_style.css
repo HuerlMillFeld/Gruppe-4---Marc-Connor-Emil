@@ -1,4 +1,4 @@
-der/* Lokale Schriftartdefinition */
+/* Lokale Schriftartdefinition */
 @font-face {
   src: url('../Fonts/Gotham-Bold.otf') format('truetype');
   font-weight: normal;
@@ -6,7 +6,7 @@ der/* Lokale Schriftartdefinition */
 }
 
 body, html {
-  font-family: Gotham;
+  font-family: Gotham, sans-serif;
   font-weight: normal;
   font-style: normal;
   margin: 0;
@@ -22,23 +22,24 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 20px;
 }
 
 .logolink {
-  margin: 50px;
+  margin: 0;
 }
 
 .logo {
   width: 150px;
-  margin-left: 30px;
 }
 
 .links {
-  margin: 50px;
+  display: flex;
+  align-items: center;
 }
 
 .link {
-  margin: 10px;
+  margin: 0 10px;
   text-decoration: none;
   color: white;
 }
@@ -60,12 +61,13 @@ header {
 }
 
 h1 {
-  font-family: Gotham-Ultra;
+  font-family: Gotham-Ultra, sans-serif;
   font-weight: normal;
 }
 
 #game {
-  width: 600px;
+  width: 100%;
+  max-width: 600px;
   height: 300px;
   border: 1px solid black;
   margin: 0 auto;
@@ -78,12 +80,10 @@ h1 {
   animation: background-animation 10s infinite linear;
 }
 
-
 @keyframes background-animation {
   0% {
     background-position: 0px 0px;
   }
-
   100% {
     background-position: -600px 0px;
   }
@@ -101,8 +101,8 @@ h1 {
 #rock {
   width: 100px;
   height: 100px;
-  position: relative;
-  top: 88px;
+  position: absolute;
+  top: 188px;
   left: 550px;
   background-image: url("../img/jump-objekt.png");
   background-size: cover;
@@ -112,10 +112,53 @@ h1 {
   animation: rock 1.33s infinite;
 }
 
+@keyframes rock {
+  0% {
+    left: 550px;
+  }
+  100% {
+    left: -50px;
+  }
+}
+
+.jump-animation {
+  animation: jump 0.5s;
+}
+
+@keyframes jump {
+  0% {
+    top: 225px;
+  }
+  50% {
+    top: 75px;
+  }
+  75% {
+    top: 75px;
+  }
+  100% {
+    top: 225px;
+  }
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #000000;
+  color: white;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #ffed00;
+}
+
 footer {
   background-color: #000000;
   color: #ffffff;
-  font-family: Gotham;
+  font-family: Gotham, sans-serif;
   padding: 20px 75px;
   display: flex;
   justify-content: space-between;
@@ -143,68 +186,47 @@ footer {
   color: #ffed00;
 }
 
-@keyframes rock {
-  0% {
-    left: 550px;
-  }
-
-  100% {
-    left: -50px;
-  }
-}
-
-.jump-animation {
-  animation: jump 0.5s;
-}
-
-@keyframes jump {
-  0% {
-    top: 225px;
-  }
-
-  50% {
-    top: 75px;
-  }
-
-  75% {
-    top: 75px;
-  }
-
-  100% {
-    top: 225px;
-  }
-}
-
-button {
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-  border: none;
-  border-radius: 5px;
-  background-color: #000000;
-  color: white;
-  transition: background-color 0.3s;
-}
-
-button:hover {
-  background-color: #000000;
-}
-/* Responsive Design */
-
-@media (max-width: 675px) {
+@media (max-width: 768px) {
   header {
-      font-size: 12px;
-      margin: 2px;
-      display: flex;
-      columns: row;
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+    padding: 10px;
   }
 
-  main {
-    margin-top: 50px;
+  .logolink {
+    margin: 0 0 10px 0;
   }
 
+  .logo {
+    width: 120px;
+  }
+
+  .links {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .link {
+    margin: 5px 0;
+  }
+
+  #container {
+    padding: 10px;
+  }
+
+  #game {
+    height: auto;
+    min-height: 200px;
+  }
 
   footer {
-      padding: 20px 25px;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px 25px;
+  }
+
+  .footer-section {
+    margin-bottom: 20px;
   }
 }
