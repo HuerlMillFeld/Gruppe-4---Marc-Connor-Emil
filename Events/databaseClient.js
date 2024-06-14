@@ -53,10 +53,6 @@ const databaseClient = {
     return result;
   },
 };
-has context menu
-
-
-has context menu
         body: JSON.stringify(payload),
       });
 
