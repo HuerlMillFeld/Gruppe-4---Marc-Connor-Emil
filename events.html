@@ -1,68 +1,64 @@
 <!DOCTYPE html>
 <html lang="de">
-
+ 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Wavesystem Events</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="Events/events_style.css">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Wavesystem Events</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="Events/events_style.css">
 </head>
-
-
+ 
 <body>
-    <header>
-        <a href="./index.html" class="logolink"><img src="./img/ws-envents-white.png" alt="Logo" class="logo"></a>
-        <div class="links">
-            <a href="./garments.html" class="link">WS Garments</a>
-            <a href="./Dino game/game.html" class="link">WS Game</a>
-            <a href="https://www.instagram.com/wavesystem_archive" target="_blank" class="link">WS Archive</a>
-        </div>
-    </header>
-
-
+<header>
+<a href="./index.html" class="logolink"><img src="./img/ws-envents-white.png" alt="Logo" class="logo"></a>
+<div class="links">
+<a href="./garments.html" class="link">WS Garments</a>
+<a href="./Dino game/game.html" class="link">WS Game</a>
+<a href="https://www.instagram.com/wavesystem_archive" target="_blank" class="link">WS Archive</a>
+</div>
+</header>
+ 
     <main>
-        <section class="recent-event">
-            <h1 class="titel">RECENT EVENT</h1>
-            <p>??.??.2024</p>
-            <p>Exciting news is on the horizon! Follow us on Instagram for the big reveal.</p>
-            <p>Stay tuned...<br></p>
-            <a href="https://www.instagram.com/wavesystem_events" target="_blank" class="button">Follow ></a>
-        </section>
-        <div class="container">
-            <h1 class="form-titel">Rave Anmeldung</h1>
-            <form id="raveForm">
-                <label for="firstName">Vorname:</label>
-                <input type="text" id="firstName" name="firstName" required>
-                
-                <label for="lastName">Nachname:</label>
-                <input type="text" id="lastName" name="lastName" required>
-                
-                <label for="phone">Telefonnummer:</label>
-                <input type="tel" id="phone" name="phone" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890">
-                
-                <label for="email">Email Adresse:</label>
-                <input type="email" id="email" name="email" required>
-                
-                <button class="anmelden-formular" type="submit">Anmelden</button>
-                <div id="spinner" class="hidden">Lädt...</div>
-                <div id="error-message" class="hidden">Diese Email wird schon verwendet</div>
-            </form>
-        </div>
-    </main>
-
-
-
+<section class="recent-event">
+<h1 class="titel">RECENT EVENT</h1>
+<p>??.??.2024</p>
+<p>Exciting news is on the horizon! Follow us on Instagram for the big reveal.</p>
+<p>Stay tuned...<br></p>
+<a href="https://www.instagram.com/wavesystem_events" target="_blank" class="button">Follow ></a>
+</section>
+<div class="container">
+<h1 class="form-titel">Rave Anmeldung</h1>
+<form id="raveForm">
+<label for="firstName">Vorname:</label>
+<input type="text" id="firstName" name="firstName">
+<label for="lastName">Nachname:</label>
+<input type="text" id="lastName" name="lastName">
+<label for="phone">Telefonnummer:</label>
+<input type="tel" id="phone" name="phone" pattern="[0-9]{3}[0-9]{3}[0-9]{2}[0-9]{2}" placeholder="123-456-78-90">
+<label for="email">Email Adresse:</label>
+<input type="email" id="email" name="email">
+<button class="anmelden-formular" type="submit">Anmelden</button>
+<div id="spinner" class="hidden">Lädt...</div>
+<div id="error-message" class="hidden">Diese Email wird schon verwendet</div>
+</form>
+</div>
+</main>
+ 
     <footer>
-        <div class="footer-section">
-            <p class="footer-titel">Instagram</p>
-            <a href="https://www.instagram.com/wavesystem_garments" target="_blank">@wavesystem_garments</a>
-            <a href="https://www.instagram.com/wavesystem_events" target="_blank">@wavesystem_events</a>
-            <a href="https://www.instagram.com/wavesystem_archive" target="_blank">@wavesystem_archive</a>
-        </div>
-        <div class="footer-section">
-            <a href="./impressum.html">Impressum</a>
-            <a href="./impressum.html">Datenschutz</a>
-        </div>
-    </footer>
+<div class="footer-section">
+<p class="footer-titel">Instagram</p>
+<a href="https://www.instagram.com/wavesystem_garments" target="_blank">@wavesystem_garments</a>
+<a href="https://www.instagram.com/wavesystem_events" target="_blank">@wavesystem_events</a>
+<a href="https://www.instagram.com/wavesystem_archive" target="_blank">@wavesystem_archive</a>
+</div>
+<div class="footer-section">
+<a href="./impressum.html">Impressum</a>
+<a href="./impressum.html">Datenschutz</a>
+</div>
+</footer>
+ 
+
+<script src="./Events/form.js"></script>
+</body>
 </html>
