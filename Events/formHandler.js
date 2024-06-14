@@ -29,7 +29,7 @@ document.getElementById("raveForm").addEventListener("submit", async (event) => 
         return;
     }
 
-    await databaseClient.insertInto("user", {
+    await databaseClient.insertInto("wavesystem_anmelden", {
         firstName: firstName,
         lastName: lastName,
         phone: phone,
