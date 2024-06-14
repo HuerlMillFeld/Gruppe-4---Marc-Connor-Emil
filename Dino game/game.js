@@ -12,7 +12,15 @@ function jump() {
   setTimeout(() => dino.classList.remove("jump-animation"), 500);
 }
 
+// Event-Listener für Tastaturereignisse
 document.addEventListener('keypress', (event) => {
+  if (!dino.classList.contains('jump-animation')) {
+    jump();
+  }
+});
+
+// Event-Listener für Touch-Ereignisse auf mobilen Geräten
+document.addEventListener('touchstart', (event) => {
   if (!dino.classList.contains('jump-animation')) {
     jump();
   }
