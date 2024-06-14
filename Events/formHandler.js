@@ -38,8 +38,8 @@ document.addEventListener('DOMContentLoaded', () => {
         lastName: lastName.value,
         phone: phone.value,
         email: email.value,
-    }
-)});
+    });
+});
    
 
     spinner.classList.add("hidden");
