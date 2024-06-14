@@ -7,7 +7,6 @@ body {
 a {
     text-decoration: none;
     color: #ffffff;
-    margin: 10px;
     font-family: Gotham;
 }
 
@@ -18,26 +17,26 @@ a:hover {
 
 
 
+a:hover {
+    text-decoration: underline;
+    color: #000000;
+}
+
 header {
     background-color: #58696d;
     height: 100px;
-    color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0 50px;
 }
 
-.logo-link {
-    margin: 50px;
-}
-
-.logo {
+.logo-link img {
     width: 150px;
-    margin-left: 30px;
 }
 
-.nav {
-    margin: 50px;
+.nav a {
+    margin: 10px;
 }
 
 
@@ -46,7 +45,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 100px;
+    padding-top: 40px;
     padding-bottom: 50px;
     height: calc(100vh - 160px);
     background-image: url("../img/Stoffrollen.png"); /* Pfad zu deinem Bild */
@@ -55,6 +54,11 @@ main {
     background-position: center top;
 }
 
+.titel {
+    font-family: Gotham-Bold;
+    font-size: 40px;
+    margin: 0;
+}
 
 .product {
     display: flex;
@@ -65,37 +69,48 @@ main {
 
 .produktbild {
     height: 600px;
-    margin-right: 20px;
+    margin-right: 100px;
 }
 
 .product-details {
     display: flex;
     flex-direction: column;
+    width: 30%;
+    background-color: #ffffff;
+    padding: 20px 35px;
 }
 
-.size-buttons {
+.size {
     display: flex;
     gap: 10px;
-    margin-bottom: 10px;
+    color: #ffffff;
 }
 
-.size-buttons button {
+.size-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #000000;
-    color: white;
-    border: none;
-    cursor: pointer;
-    padding: 10px;
-    font-size: 16px;
-    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    border-radius: 2px;
 }
 
 .purchase {
+    display: flex;
+    justify-content: center;
     padding: 10px 20px;
     font-size: 16px;
     background-color: #58696d;
     color: white;
     border: none;
-    cursor: pointer;
+    border-radius: 2px;
+}
+
+.purchase:hover {
+    background-color: #58696de0;
+    text-decoration: none;
+    color: #ffffff;
 }
 
 
@@ -128,3 +143,16 @@ footer {
     text-decoration: underline;
     color: #000000;
   }
+
+  @media (max-width: 650px) {
+    .nav a {
+        font-size: 12px;
+        margin: 2px;
+        display: flex;
+        columns: row;
+    }
+
+    footer {
+        padding: 20px 25px;
+    }
+}

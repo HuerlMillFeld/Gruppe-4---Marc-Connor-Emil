@@ -1,21 +1,19 @@
+/* Lokale Schriftartdefinition */
+@font-face {
+  src: url('../Fonts/Gotham-Bold.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 
-body {
+body, html {
+  font-family: Gotham;
+  font-weight: normal;
+  font-style: normal;
   margin: 0;
   padding: 0;
-  font-family: Gotham;
+  height: 100%;
+  background-color: #000000;
 }
-
-a {
-  text-decoration: none;
-  color: #ffffff;
-  margin: 10px;
-  font-family: Gotham;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
 
 header {
   background-color: #000000;
@@ -50,25 +48,20 @@ header {
   color: #ffed00;
 }
 
-main {
-  background-color: #000000
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
 #container {
-  background-color: yellow;
+  background-color: #ffed00;
   padding: 20px;
-  border: 2px solid black;
-  border-radius: 10px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 
 #score {
   margin: 20px 0;
   font-size: 24px;
+}
+
+h1 {
+  font-family: Gotham-Ultra;
+  font-weight: normal;
 }
 
 #game {
@@ -84,6 +77,7 @@ main {
 .background-animation {
   animation: background-animation 10s infinite linear;
 }
+
 
 @keyframes background-animation {
   0% {
@@ -116,6 +110,37 @@ main {
 
 .rock-animation {
   animation: rock 1.33s infinite;
+}
+
+footer {
+  background-color: #000000;
+  color: #ffffff;
+  font-family: Gotham;
+  padding: 20px 75px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-titel {
+  margin: 0;
+  font-size: 20px;
+}
+
+.footer-section a {
+  color: white;
+  margin: 5px 0;
+  text-decoration: none;
+}
+
+.footer-section a:hover {
+  text-decoration: underline;
+  color: #ffed00;
 }
 
 @keyframes rock {
