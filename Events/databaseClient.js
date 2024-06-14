@@ -1,3 +1,10 @@
+/* 
+- Erlaubt die Kommunikation mit einer Datenbank via SQL und JavaScript zu Schulungszwecken.
+- Verwenden Sie executeSqlQuery und insertInto.
+- Sie müssen nicht im Detail verstehen, wie der Code funktioniert. 
+*/
+
+// Ändern Sie die folgenden beiden Werte, um ihre Datenbank zu verbinden.
 const GROUP_NAME = "cl4";
 const PASSWORD = "o42rw7f4oult7403";
 
@@ -28,12 +35,23 @@ const databaseClient = {
       console.error("DB error", error);
     }
   },
+  /*
+    Beispiel:
+    - sqlTable: "user" // Name der Tabelle in der SQL Datenbank
+    - formData: {
+        // "email" Name der Spalte in der SQL Tabelle
+        // "emailField.value" Eingabe des Benutzers aus dem Formularfeld
+        email: emailField.value,
+      }
+     */
   insertInto: async (sqlTable, formData) => {
     let result = null;
     const fields = Object.keys(formData);
     const values = Object.values(formData);
 
-    const sql = `INSERT INTO ${sqlTable} (${fields.join(",")}) VALUES ('${values.join("','")}')`;
+    const sql = `INSERT INTO ${sqlTable} (${fields.join(
+      ","
+    )}) VALUES ('${values.join("','")}')`;
     try {
       result = await databaseClient.executeSqlQuery(sql);
     } catch (error) {
@@ -43,49 +61,20 @@ const databaseClient = {
   },
 };
 
-document.getElementById("raveForm").addEventListener("submit", async (event) => {
-  event.preventDefault();
-  
-  const firstName = document.getElementById("firstName").value;
-  const lastName = document.getElementById("lastName").value;
-  const phone = document.getElementById("phone").value;
-  const email = document.getElementById("email").value;
-  const spinner = document.getElementById("spinner");
-  const errorMessage = document.getElementById("error-message");
-
-  spinner.classList.remove("hidden");
-  errorMessage.classList.add("hidden");
-
-  if (!validateEmail(email)) {
-    errorMessage.textContent = "Ungültige Email-Adresse.";
-    errorMessage.classList.remove("hidden");
-    spinner.classList.add("hidden");
-    return;
-  }
-
-  const existingUser = await databaseClient.executeSqlQuery(
-    `SELECT * FROM wavesystem_anmelden WHERE email = '${email}'`
+/*
+Den folgenden Code müssen Sie nicht in Ihr Projekt übernehmen. 
+Dient als Vorlage für die Verwendung von executeSqlQuery und insertInto.
+*/
+const run = async () => {
+  const users = await databaseClient.executeSqlQuery(
+    "SELECT * user LIMIT 2 ORDER BY ID DESC"
   );
+  // Das erste Element result[0] enthält Meta Informationen der Datenbank, das lassen wir weg. Die eigentlichen Daten sind in result[1]
+  console.log(users[1]);
 
-  if (existingUser && existingUser.length > 1) {
-    errorMessage.textContent = "Diese Email wird schon verwendet.";
-    errorMessage.classList.remove("hidden");
-    spinner.classList.add("hidden");
-    return;
-  }
-
-  await databaseClient.insertInto("wavesystem_anmelden", {
-    vorname: firstName,
-    nachname: lastName,
-    tel: phone,
-    email: email,
+  // insertInto ist eine Hilfsfunktion für INSERT Befehle
+  await databaseClient.insertInto("user", {
+    email: "myEmailAddress",
   });
-
-  spinner.classList.add("hidden");
-  alert("Anmeldung erfolgreich!");
-});
-
-function validateEmail(email) {
-  const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  return re.test(String(email).toLowerCase());
-}
+};
+//run();
