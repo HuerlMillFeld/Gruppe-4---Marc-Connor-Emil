@@ -13,6 +13,7 @@ a {
 
 a:hover {
     text-decoration: underline;
+    color: #000000;
 }
 
 
@@ -57,12 +58,12 @@ main {
 .product {
     display: flex;
     align-items: center;
-    background-color: rgb(255, 255, 255);
+    background-color: #ffffff;
     padding: 50px;
 }
 
 .produktbild {
-    height: 200px;
+    height: 600px;
     margin-right: 20px;
 }
 
@@ -99,22 +100,30 @@ main {
 
 
 footer {
-    background-color: #58696d; /* Dunkelroter Hintergrund */
-    color: white; /* Weiße Textfarbe */
-    padding: 20px 50px; /* Abstände innen */
-    display: flex; /* Flexbox für Layout */
-    justify-content: space-between; /* Inhalte links und rechts anordnen */
-    margin-top: 0;
-}
-
-
-footer-links {
-    margin-bottom: 10px; /* Abstand zwischen den Links */
-    font-size: 16px; /* Schriftgröße */
+    background-color: #58696d;
+    color: #ffffff;
+    padding: 20px 75px;
     display: flex;
-    flex-direction: row;
-}
-
-footer a:hover {
-    text-decoration: underline; /* Unterstreichung beim Hovern */
-}
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .footer-section {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .footer-titel {
+    margin: 0;
+    font-size: 20px;
+  }
+  
+  .footer-section a {
+    color: white;
+    margin: 5px 0;
+  }
+  
+  .footer-section a:hover {
+    text-decoration: underline;
+    color: #000000;
+  }

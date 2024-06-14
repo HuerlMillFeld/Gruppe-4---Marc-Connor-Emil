@@ -1,17 +1,21 @@
-/* Lokale Schriftartdefinition */
-@font-face {
-  font-family: 'Barlow';
-  src: url('../Fonts/Gotham-Bold.otf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
 
-body, html {
+body {
   margin: 0;
   padding: 0;
-  height: 100%;
-  font-family: 'Barlow', sans-serif; /* Lokale Schriftart verwenden */
+  font-family: Gotham;
 }
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+  margin: 10px;
+  font-family: Gotham;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
 
 header {
   background-color: #000000;
@@ -43,20 +47,20 @@ header {
 
 .link:hover {
   text-decoration: underline;
+  color: #ffed00;
 }
 
 
 
 
-.title {
-  color: white;
-}
+
 
 main {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 75px 50px;
   height: calc(100vh - 160px);
   background-image: url("../img/hintergrund.png");
   background-size: cover;
@@ -73,45 +77,69 @@ main {
   text-align: center;
 }
 
-.recent-event h2 {
-  font-size: 24px;
-  margin-bottom: 10px;
+.titel {
+  color: white;
 }
-
+ 
 .recent-event p {
   font-size: 16px;
-  margin-bottom: 10px;
 }
 
-.recent-event button {
-  padding: 10px 20px;
-  font-size: 16px;
+.button {
+  margin-top: 30px;
+  padding: 12px 55px; /*Lässt den Rand Oben und Unten 12px sein und an den Seiten 55px*/
+  font-family: Gotham-Bold;
+  text-decoration: none;
+  border-style: none;
+  border-radius: 2px;
   background-color: #000000;
-  color: white; 
-  border: none;
-  cursor: pointer;
+  color: #ffffff;
 }
+
+.button:hover {
+  text-decoration: none;
+  background-color: #000000e0;
+  color: #ffffff;
+}
+
+.form-titel {
+  color: #ffffff;
+  font-family: Gotham-Bold;
+  font-weight: normal;
+
+}
+
 
 footer {
-  background-color: #000000; /* Gelber Hintergrund */
-  color: rgb(255, 255, 255); /* Weisse Textfarbe */
-  padding: 20px 50px; /* Abstände innen */
-  display: flex; /* Flexbox für Layout */
-  justify-content: space-between; /* Inhalte links und rechts anordnen */
+  background-color: #000000;
+  color: #ffffff;
+  padding: 20px 75px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-footer a {
-  color: rgb(255, 255, 255); /* Weiße Linkfarbe */
-  text-decoration: none; /* Keine Unterstreichung */
-  margin-bottom: 10px; /* Abstand zwischen den Links */
-  font-size: 16px; /* Schriftgröße */
+.footer-section {
   display: flex;
   flex-direction: column;
 }
 
-footer a:hover {
-  text-decoration: underline; /* Unterstreichung beim Hovern */
+.footer-titel {
+  margin: 0;
+  font-size: 20px;
 }
+
+.footer-section a {
+  color: white;
+  margin: 5px 0;
+}
+
+.footer-section a:hover {
+  text-decoration: underline;
+  color: #ffed00;
+}
+
+
 
 /* Responsive Styles */
 @media screen and (max-width: 1024px) {
