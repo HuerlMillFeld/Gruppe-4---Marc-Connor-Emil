@@ -1,18 +1,21 @@
-/* Lokale Schriftartdefinition */
-@font-face {
-  font-family: 'Barlow';
-  src: url('../Fonts/Gotham-Bold.otf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
 
-body, html {
+body {
   margin: 0;
   padding: 0;
-  height: 100%;
-  font-family: 'Barlow', sans-serif; /* Lokale Schriftart verwenden */
-  background-color: #000000;
+  font-family: Gotham;
 }
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+  margin: 10px;
+  font-family: Gotham;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
 
 header {
   background-color: #000000;
