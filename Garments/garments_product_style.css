@@ -47,6 +47,7 @@ main {
     justify-content: center;
     align-items: center;
     padding-top: 100px;
+    padding-bottom: 50px;
     height: calc(100vh - 160px);
     background-image: url("../img/Stoffrollen.png"); /* Pfad zu deinem Bild */
     background-size: cover;
