@@ -32,8 +32,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const form = document.querySelector('form');
     form.addEventListener('submit', async (event) => {
         event.preventDefault(); // Prevent the form from submitting immediately
-        const isValid = await validateForm(); // Validate the form asynchronously
-        if (isValid) {
                 // Speichert die Daten in der Datenbank
                  await databaseClient.insertInto("wavesystem_anmelden", {
         firstName: firstName.value,
@@ -41,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
         phone: phone.value,
         email: email.value,
     }
-})});
+)});
    
 
     spinner.classList.add("hidden");
@@ -51,4 +49,4 @@ document.addEventListener('DOMContentLoaded', () => {
 function validateEmail(email) {
     const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return re.test(String(email).toLowerCase());
-}
+}})
