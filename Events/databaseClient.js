@@ -71,10 +71,3 @@ const run = async () => {
   );
   // Das erste Element result[0] enthält Meta Informationen der Datenbank, das lassen wir weg. Die eigentlichen Daten sind in result[1]
   console.log(users[1]);
-
-  // insertInto ist eine Hilfsfunktion für INSERT Befehle
-  await databaseClient.insertInto("user", {
-    email: "myEmailAddress",
-  });
-};
-//run();
