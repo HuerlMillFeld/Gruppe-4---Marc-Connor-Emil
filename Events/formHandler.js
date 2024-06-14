@@ -18,16 +18,6 @@ document.getElementById("raveForm").addEventListener("submit", async (event) => 
         return;
     }
 
-    const existingUser = await databaseClient.executeSqlQuery(
-        `SELECT * FROM user WHERE email = '${email}'`
-    );
-
-    if (existingUser && existingUser.length > 1) {
-        errorMessage.textContent = "Diese Email wird schon verwendet.";
-        errorMessage.classList.remove("hidden");
-        spinner.classList.add("hidden");
-        return;
-    }
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.querySelector('form');
     form.addEventListener('submit', async (event) => {
