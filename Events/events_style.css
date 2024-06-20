@@ -1,64 +1,41 @@
+/* Lokale Schriftartdefinition */
+@font-face {
+  font-family: 'Barlow';
+  src: url('../Fonts/Gotham-Bold.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 
-body {
+body, html {
   margin: 0;
   padding: 0;
-  font-family: Gotham;
+  height: 100%;
+  font-family: 'Barlow', sans-serif; /* Lokale Schriftart verwenden */
 }
-
-a {
-  text-decoration: none;
-  color: #ffffff;
-  margin: 10px;
-  font-family: Gotham;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
 
 header {
   background-color: #000000;
-  height: 100px;
-  color: white;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  height: 100px;
   align-items: center;
+  color: white;
 }
 
-.logolink {
-  margin: 50px;
-}
-
-.logo {
+header img {
   width: 150px;
   margin-left: 30px;
 }
 
-.links {
-  margin: 50px;
-}
-
-.nav {
-  margin: 10px;
-  text-decoration: none;
+h1 {
   color: white;
 }
-
-.link:hover {
-  text-decoration: underline;
-  color: #ffed00;
-}
-
-
-
 
 main {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 75px 50px;
   height: calc(100vh - 160px);
   background-image: url("../img/hintergrund.png");
   background-size: cover;
@@ -75,72 +52,66 @@ main {
   text-align: center;
 }
 
-.titel {
-  color: #000000;
+.recent-event h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
 }
- 
+
 .recent-event p {
   font-size: 16px;
+  margin-bottom: 10px;
 }
 
-.container {
-  padding 20px 50px;
+.recent-event button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #000;
+  color: white; 
+  border: none;
+  cursor: pointer;
 }
-
-.follow-button {
-  margin-top: 30px;
-  padding: 12px 55px; /*Lässt den Rand Oben und Unten 12px sein und an den Seiten 55px*/
-  font-family: Gotham-Bold;
-  text-decoration: none;
-  border-style: none;
-  border-radius: 2px;
-  background-color: #000000;
-  color: #ffffff;
-}
-
-.follow-button:hover {
-  text-decoration: none;
-  background-color: #000000e0;
-  color: #ffffff;
-}
-
-.form-titel {
-  color: #ffffff;
-  font-family: Gotham-Bold;
-  font-weight: normal;
-}
-
 
 footer {
-  background-color: #000000;
-  color: #ffffff;
-  padding: 20px 75px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  background-color: #000000; /* Gelber Hintergrund */
+  color: rgb(255, 255, 255); /* Weisse Textfarbe */
+  padding: 20px 50px; /* Abstände innen */
+  display: flex; /* Flexbox für Layout */
+  justify-content: space-between; /* Inhalte links und rechts anordnen */
 }
 
-.footer-section {
+footer a {
+  color: rgb(255, 255, 255); /* Weiße Linkfarbe */
+  text-decoration: none; /* Keine Unterstreichung */
+  margin-bottom: 10px; /* Abstand zwischen den Links */
+  font-size: 16px; /* Schriftgröße */
   display: flex;
   flex-direction: column;
 }
 
-.footer-titel {
-  margin: 0;
-  font-size: 20px;
+footer a:hover {
+  text-decoration: underline; /* Unterstreichung beim Hovern */
 }
 
-.footer-section a {
-  color: white;
-  margin: 5px 0;
+/* Responsive Styles */
+@media screen and (max-width: 1024px) {
+  header img {
+      width: 150px;
+      margin-right: 5px;
+  }
 }
 
-.footer-section a:hover {
-  text-decoration: underline;
-  color: #ffed00;
+@media screen and (max-width: 823px) {
+  header {
+      flex-wrap: wrap;
+      justify-content: center;
+      height: 100px;
+  }
+
+  header img {
+      width: 100px;
+      margin-top: 15px;
+  }
 }
-
-
 
 form {
     display: flex;
@@ -195,29 +166,4 @@ button:hover {
 #error-message {
     color: red;
     margin-top: 10px;
-}
-
-
-
-
-
-
-/* Responsive Design */
-
-@media (max-width: 675px) {
-  .nav a {
-      font-size: 12px;
-      margin: 2px;
-      display: flex;
-      columns: row;
-  }
-
-  .recent-event {
-    margin-top: 50px;
-  }
-
-
-  footer {
-      padding: 20px 25px;
-  }
 }
