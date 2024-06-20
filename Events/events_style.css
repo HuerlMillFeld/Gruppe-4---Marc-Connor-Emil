@@ -1,25 +1,22 @@
-/* Lokale Schriftartdefinition */
-@font-face {
-  font-family: 'Barlow';
-  src: url('../Fonts/Gotham-Bold.otf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
 
 body {
   margin: 0;
   padding: 0;
   font-family: Gotham;
 }
+
 a {
   text-decoration: none;
   color: #ffffff;
   margin: 10px;
   font-family: Gotham;
 }
+
 a:hover {
   text-decoration: underline;
 }
+
+
 header {
   background-color: #000000;
   height: 100px;
@@ -28,18 +25,20 @@ header {
   justify-content: space-between;
   align-items: center;
 }
+
 .logolink {
   margin: 50px;
 }
+
 .logo {
   width: 150px;
   margin-left: 30px;
 }
+
 .links {
   margin: 50px;
 }
 
-.link {
 .nav {
   margin: 10px;
   text-decoration: none;
@@ -47,10 +46,13 @@ header {
 }
 
 .link:hover {
-.nav:hover {
   text-decoration: underline;
   color: #ffed00;
 }
+
+
+
+
 main {
   display: flex;
   flex-direction: column;
@@ -63,6 +65,7 @@ main {
   background-repeat: no-repeat;
   background-position: center top;
 }
+
 .recent-event {
   background-color: #ffed00;
   margin: 20px;
@@ -71,14 +74,20 @@ main {
   max-width: 800px;
   text-align: center;
 }
+
 .titel {
-  color: white;
+  color: #000000;
 }
  
 .recent-event p {
   font-size: 16px;
 }
-.button {
+
+.container {
+  padding 20px 50px;
+}
+
+.follow-button {
   margin-top: 30px;
   padding: 12px 55px; /*Lässt den Rand Oben und Unten 12px sein und an den Seiten 55px*/
   font-family: Gotham-Bold;
@@ -88,16 +97,20 @@ main {
   background-color: #000000;
   color: #ffffff;
 }
-.button:hover {
+
+.follow-button:hover {
   text-decoration: none;
   background-color: #000000e0;
   color: #ffffff;
 }
+
 .form-titel {
   color: #ffffff;
   font-family: Gotham-Bold;
   font-weight: normal;
 }
+
+
 footer {
   background-color: #000000;
   color: #ffffff;
@@ -106,18 +119,22 @@ footer {
   justify-content: space-between;
   align-items: center;
 }
+
 .footer-section {
   display: flex;
   flex-direction: column;
 }
+
 .footer-titel {
   margin: 0;
   font-size: 20px;
 }
+
 .footer-section a {
   color: white;
   margin: 5px 0;
 }
+
 .footer-section a:hover {
   text-decoration: underline;
   color: #ffed00;
@@ -125,35 +142,16 @@ footer {
 
 
 
-/* Responsive Styles */
-@media screen and (max-width: 1024px) {
-  header img {
-      width: 150px;
-      margin-right: 5px;
-  }
-}
-
-@media screen and (max-width: 823px) {
-  header {
-      flex-wrap: wrap;
-      justify-content: center;
-      height: 100px;
-  }
-
-  header img {
-      width: 100px;
-      margin-top: 15px;
-  }
-}
-
 form {
     display: flex;
     flex-direction: column;
 }
+
 label {
     margin-bottom: 5px;
     color: white;
 }
+
 input[type="text"],
 input[type="tel"],
 input[type="email"] {
@@ -162,12 +160,14 @@ input[type="email"] {
     border: none;
     border-radius: 5px;
 }
+
 input[type="text"]:focus,
 input[type="tel"]:focus,
 input[type="email"]:focus {
     outline: none;
     box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
 }
+
 .anmelden-formular {
     padding: 10px;
     border: none;
@@ -178,16 +178,20 @@ input[type="email"]:focus {
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
+
 button:hover {
     background-color: #ffee00e0;
 }
+
 .hidden {
     display: none;
 }
+
 #spinner {
     color: white;
     margin-top: 10px;
 }
+
 #error-message {
     color: red;
     margin-top: 10px;
