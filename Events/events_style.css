@@ -6,123 +6,128 @@
   font-style: normal;
 }
 
-body, html {
+body {
   margin: 0;
   padding: 0;
-  height: 100%;
-  font-family: 'Barlow', sans-serif; /* Lokale Schriftart verwenden */
+  font-family: Gotham;
 }
-
+a {
+  text-decoration: none;
+  color: #ffffff;
+  margin: 10px;
+  font-family: Gotham;
+}
+a:hover {
+  text-decoration: underline;
+}
 header {
   background-color: #000000;
-  display: flex;
-  justify-content: center;
   height: 100px;
-  align-items: center;
   color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-
-header img {
+.logolink {
+  margin: 50px;
+}
+.logo {
   width: 150px;
   margin-left: 30px;
 }
-
-h1 {
+.links {
+  margin: 50px;
+}
+.nav {
+  margin: 10px;
+  text-decoration: none;
   color: white;
 }
+
+.nav:hover {
+.link:hover {
+  text-decoration: underline;
+  color: #ffed00;
+}
+
+
+
+
+
 
 main {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: calc(100vh - 160px);
-  background-image: url("../img/hintergrund.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center top;
+@@ -78,14 +76,18 @@ main {
 }
 
-.recent-event {
-  background-color: #ffed00;
-  margin: 20px;
-  padding: 20px;
-  width: 80%;
-  max-width: 800px;
-  text-align: center;
-}
-
-.recent-event h2 {
-  font-size: 24px;
-  margin-bottom: 10px;
+.titel {
+  color: white;
+  color: #000000;
 }
 
 .recent-event p {
   font-size: 16px;
-  margin-bottom: 10px;
 }
 
-.recent-event button {
-  padding: 10px 20px;
-  font-size: 16px;
-  background-color: #000;
-  color: white; 
-  border: none;
-  cursor: pointer;
+.button {
+.container {
+  padding 20px 50px;
 }
+
+.follow-button {
+  margin-top: 30px;
+  padding: 12px 55px; /*Lässt den Rand Oben und Unten 12px sein und an den Seiten 55px*/
+  font-family: Gotham-Bold;
+@@ -96,7 +98,7 @@ main {
+  color: #ffffff;
+}
+
+.button:hover {
+.follow-button:hover {
+  text-decoration: none;
+  background-color: #000000e0;
+  color: #ffffff;
+@@ -106,7 +108,6 @@ main {
+  color: #ffffff;
+  font-family: Gotham-Bold;
+  font-weight: normal;
+
+}
+
 
 footer {
-  background-color: #000000; /* Gelber Hintergrund */
-  color: rgb(255, 255, 255); /* Weisse Textfarbe */
-  padding: 20px 50px; /* Abstände innen */
-  display: flex; /* Flexbox für Layout */
-  justify-content: space-between; /* Inhalte links und rechts anordnen */
+  background-color: #000000;
+  color: #ffffff;
+  padding: 20px 75px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-
-footer a {
-  color: rgb(255, 255, 255); /* Weiße Linkfarbe */
-  text-decoration: none; /* Keine Unterstreichung */
-  margin-bottom: 10px; /* Abstand zwischen den Links */
-  font-size: 16px; /* Schriftgröße */
+.footer-section {
   display: flex;
   flex-direction: column;
 }
-
-footer a:hover {
-  text-decoration: underline; /* Unterstreichung beim Hovern */
+.footer-titel {
+  margin: 0;
+  font-size: 20px;
 }
-
-/* Responsive Styles */
-@media screen and (max-width: 1024px) {
-  header img {
-      width: 150px;
-      margin-right: 5px;
-  }
+.footer-section a {
+  color: white;
+  margin: 5px 0;
 }
-
-@media screen and (max-width: 823px) {
-  header {
-      flex-wrap: wrap;
-      justify-content: center;
-      height: 100px;
-  }
-
-  header img {
-      width: 100px;
-      margin-top: 15px;
-  }
+.footer-section a:hover {
+  text-decoration: underline;
+  color: #ffed00;
 }
-
 form {
     display: flex;
     flex-direction: column;
 }
-
 label {
     margin-bottom: 5px;
     color: white;
 }
-
 input[type="text"],
 input[type="tel"],
 input[type="email"] {
@@ -131,14 +136,12 @@ input[type="email"] {
     border: none;
     border-radius: 5px;
 }
-
 input[type="text"]:focus,
 input[type="tel"]:focus,
 input[type="email"]:focus {
     outline: none;
     box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
 }
-
 .anmelden-formular {
     padding: 10px;
     border: none;
@@ -149,21 +152,32 @@ input[type="email"]:focus {
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
-
 button:hover {
     background-color: #ffee00e0;
 }
-
 .hidden {
     display: none;
 }
-
 #spinner {
     color: white;
     margin-top: 10px;
 }
-
 #error-message {
     color: red;
     margin-top: 10px;
+}
+/* Responsive Design */
+@media (max-width: 675px) {
+  .nav a {
+      font-size: 12px;
+      margin: 2px;
+      display: flex;
+      columns: row;
+  }
+  .recent-event {
+    margin-top: 50px;
+  }
+  footer {
+      padding: 20px 25px;
+  }
 }
